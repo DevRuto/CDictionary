@@ -21,5 +21,5 @@ void nr_dictionary_add(nr_dictionary_t* dict, char* key, char* value) {
 }
 
 void nr_dictionary_free(nr_dictionary_t *dict) {
-    dict->headers = realloc(dict->headers, 0);
+    free(dict->headers);
 }
