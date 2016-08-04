@@ -18,6 +18,9 @@ typedef struct nr_dictionary {
 } nr_dictionary_t;
 
 void nr_dictionary_add(nr_dictionary_t* dict, char* key, char* value);
+void nr_dictionary_remove(nr_dictionary_t* dict, char* key);
+int nr_dictionary_indexof(nr_dictionary_t* dict, char* key);
+
 void nr_dictionary_init(nr_dictionary_t* dict);
 void nr_dictionary_free(nr_dictionary_t* dict);
 

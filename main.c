@@ -8,9 +8,15 @@ main() {
     nr_dictionary_init(&dict);
     printf("Size of char pointer: %d\n", sizeof(char*));
     int i;
-    for (i = 0; i < 100; i++) {
-        nr_dictionary_add(&dict, "testkey", "value");
-    }
+    nr_dictionary_add(&dict, "a", "value");
+    nr_dictionary_add(&dict, "b", "value");
+    nr_dictionary_add(&dict, "c", "value");
+    nr_dictionary_add(&dict, "d", "value");
+    nr_dictionary_add(&dict, "e", "value");
+    nr_dictionary_add(&dict, "f", "value");
+    nr_dictionary_remove(&dict, "c");
+    nr_dictionary_add(&dict, "g", "value");
+    nr_dictionary_add(&dict, "h", "value");
     nr_dictionary_add(&dict, "asdf", "fda");
     for (i = 0; i < dict.count; i++) {
         printf("Key: %s - Value: %s\n", dict.headers[i].key, dict.headers[i].value);
