@@ -1,5 +1,6 @@
 # CDictionary
 
-## Purpose
-* Design of a dictionary in C
-* _Mainly to learn C_
+* An implementation of a dictionary in C
+
+## TODO
+* Iterator
