@@ -3,7 +3,18 @@
 #include <stdlib.h>
 #include "nr_dictionary.h"
 
-main() {
+void main3() {
+    nr_dictionary_t dict;
+    printf("%d\n", sizeof(dict));
+    nr_dictionary_init(&dict);
+    printf("%d\n", sizeof(dict));
+    nr_dictionary_add(&dict, "a", "asdf");
+    printf("%d\n", sizeof(dict.headers));
+    nr_dictionary_free(&dict);
+    printf("%d\n", sizeof(dict.headers));
+}
+
+void main() {
     nr_dictionary_t dict;
     nr_dictionary_init(&dict);
     printf("Size of char pointer: %d\n", sizeof(char*));

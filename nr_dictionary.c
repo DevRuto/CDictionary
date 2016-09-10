@@ -5,7 +5,8 @@
 
 void nr_dictionary_realloc(nr_dictionary_t *dict) {
     if (!dict) return;
-    dict->headers = realloc(dict->headers, dict->count*sizeof(nr_dictionary_header_t));
+    //dict->headers = realloc(dict->headers, dict->count*sizeof(nr_dictionary_header_t));
+    dict->headers = realloc(dict->headers, dict->count*(sizeof(*dict->headers)));
 }
 
 int nr_dictionary_indexof(nr_dictionary_t *dict, char* key) {
@@ -17,7 +18,6 @@ int nr_dictionary_indexof(nr_dictionary_t *dict, char* key) {
 }
 
 void nr_dictionary_init(nr_dictionary_t *dict) {
-    dict->headers = malloc(1*sizeof(nr_dictionary_header_t*));
     dict->count = 0;
 }
 
